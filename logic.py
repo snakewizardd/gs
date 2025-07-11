@@ -8,6 +8,9 @@ offset_x = 20
 offset_y = 200 + 7 * 23.1
 
 colors_grass = {'top': '#7cbd6b', 'left': '#5e8c4e', 'right': '#4d7a3d'}
+colors_sand = {'top': '#f4a460', 'left': '#cfa15f', 'right': '#b68a36'}
+colors_water = {'top': '#1e90ff', 'left': '#187bcd', 'right': '#0b548b'}
+colors_stone = {'top': '#a9a9a9', 'left': '#808080', 'right': '#696969'}
 colors_wood = {'top': '#a0522d', 'left': '#8b4513', 'right': '#6b4513'}
 colors_leaves = {'top': '#228b22', 'left': '#006400', 'right': '#004b00'}
 
@@ -26,25 +29,54 @@ def draw_block_iso(i, j, k, colors):
     draw_block(pos_x, pos_y, colors)
 
 
+# coordinates for special ground blocks
+water_coords = {(1,1), (1,2), (2,1), (2,2)}
+sand_coords = {
+    (0,1), (0,2), (1,0), (2,0),
+    (3,1), (3,2), (1,3), (2,3)
+}
+stone_path = { (i,4) for i in range(chunk_size) }
+
 # ground layer
 for j in range(chunk_size):
     for i in range(chunk_size - 1, -1, -1):
-        draw_block_iso(i, j, 0, colors_grass)
+        coord = (i,j)
+        if coord in water_coords:
+            colors = colors_water
+        elif coord in sand_coords:
+            colors = colors_sand
+        elif coord in stone_path:
+            colors = colors_stone
+        else:
+            colors = colors_grass
+        draw_block_iso(i, j, 0, colors)
 
-# tree trunk
-tree_i, tree_j = 4, 4
+# first tree at center
+center_i, center_j = 4, 4
 for k in range(1, 3):
-    draw_block_iso(tree_i, tree_j, k, colors_wood)
-
-# tree leaves layer around trunk at z=3
+    draw_block_iso(center_i, center_j, k, colors_wood)
 leaf_coords = [
-    (tree_i, tree_j, 3),
-    (tree_i - 1, tree_j, 3),
-    (tree_i + 1, tree_j, 3),
-    (tree_i, tree_j - 1, 3),
-    (tree_i, tree_j + 1, 3)
+    (center_i, center_j, 3),
+    (center_i - 1, center_j, 3),
+    (center_i + 1, center_j, 3),
+    (center_i, center_j - 1, 3),
+    (center_i, center_j + 1, 3)
 ]
 for i, j, k in leaf_coords:
+    draw_block_iso(i, j, k, colors_leaves)
+
+# additional tree
+extra_i, extra_j = 1, 6
+for k in range(1, 3):
+    draw_block_iso(extra_i, extra_j, k, colors_wood)
+extra_leaf_coords = [
+    (extra_i, extra_j, 3),
+    (extra_i - 1, extra_j, 3),
+    (extra_i + 1, extra_j, 3),
+    (extra_i, extra_j - 1, 3),
+    (extra_i, extra_j + 1, 3)
+]
+for i, j, k in extra_leaf_coords:
     draw_block_iso(i, j, k, colors_leaves)
 
 print('</svg>')
