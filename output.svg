@@ -94,16 +94,6 @@
 <path fill="#5e8c4e" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
 <path fill="#4d7a3d" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
 </g>
-<g transform="translate(260, 315.50000000000006)">
-<path fill="#7cbd6b" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
-<path fill="#5e8c4e" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
-<path fill="#4d7a3d" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
-</g>
-<g transform="translate(220, 338.6)">
-<path fill="#f4a460" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
-<path fill="#cfa15f" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
-<path fill="#b68a36" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
-</g>
 <g transform="translate(180, 361.70000000000005)">
 <path fill="#1e90ff" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
 <path fill="#187bcd" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
@@ -130,16 +120,6 @@
 <path fill="#4d7a3d" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
 </g>
 <g transform="translate(340, 315.50000000000006)">
-<path fill="#7cbd6b" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
-<path fill="#5e8c4e" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
-<path fill="#4d7a3d" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
-</g>
-<g transform="translate(300, 338.6)">
-<path fill="#7cbd6b" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
-<path fill="#5e8c4e" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
-<path fill="#4d7a3d" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
-</g>
-<g transform="translate(260, 361.70000000000005)">
 <path fill="#7cbd6b" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
 <path fill="#5e8c4e" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
 <path fill="#4d7a3d" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
@@ -388,5 +368,125 @@
 <path fill="#228b22" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
 <path fill="#006400" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
 <path fill="#004b00" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(260, 361.70000000000005)">
+<path fill="#8b4513" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#5a3414" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#3e220a" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(220, 384.80000000000007)">
+<path fill="#8b4513" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#5a3414" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#3e220a" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(260, 407.90000000000003)">
+<path fill="#8b4513" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#5a3414" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#3e220a" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(300, 384.80000000000007)">
+<path fill="#8b4513" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#5a3414" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#3e220a" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(300, 153.8)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(260, 176.90000000000003)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(220, 200.00000000000006)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(340, 176.90000000000003)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(300, 200.0)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(260, 223.10000000000002)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(380, 200.00000000000003)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(340, 223.10000000000002)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(300, 246.20000000000005)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(260, 361.70000000000005)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(220, 384.80000000000007)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(300, 384.80000000000007)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(260, 407.9000000000001)">
+<path fill="#a9a9a9" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#808080" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#696969" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(140, 292.40000000000003)">
+<path fill="#a0522d" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#8b4513" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#6b4513" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(100, 315.50000000000006)">
+<path fill="#a0522d" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#8b4513" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#6b4513" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(460, 292.40000000000003)">
+<path fill="#00008b" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#00006b" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#00004b" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(460, 246.20000000000002)">
+<path fill="#8b0000" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#7a0000" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#660000" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(460, 200.0)">
+<path fill="#ffdbac" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#e1b899" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#d1a180" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(300, 246.20000000000005)">
+<path fill="#ffffff" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#cccccc" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#999999" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
+</g>
+<g transform="translate(540, 292.40000000000003)">
+<path fill="#ffc0cb" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />
+<path fill="#ffb6c1" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />
+<path fill="#ffa6b1" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />
 </g>
 </svg>

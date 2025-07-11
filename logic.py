@@ -13,6 +13,12 @@ colors_water = {'top': '#1e90ff', 'left': '#187bcd', 'right': '#0b548b'}
 colors_stone = {'top': '#a9a9a9', 'left': '#808080', 'right': '#696969'}
 colors_wood = {'top': '#a0522d', 'left': '#8b4513', 'right': '#6b4513'}
 colors_leaves = {'top': '#228b22', 'left': '#006400', 'right': '#004b00'}
+colors_dirt = {'top': '#8b4513', 'left': '#5a3414', 'right': '#3e220a'}
+colors_skin = {'top': '#ffdbac', 'left': '#e1b899', 'right': '#d1a180'}
+colors_shirt = {'top': '#8b0000', 'left': '#7a0000', 'right': '#660000'}
+colors_pants = {'top': '#00008b', 'left': '#00006b', 'right': '#00004b'}
+colors_pig = {'top': '#ffc0cb', 'left': '#ffb6c1', 'right': '#ffa6b1'}
+colors_cow = {'top': '#ffffff', 'left': '#cccccc', 'right': '#999999'}
 
 
 def draw_block(pos_x, pos_y, colors):
@@ -36,11 +42,25 @@ sand_coords = {
     (3,1), (3,2), (1,3), (2,3)
 }
 stone_path = { (i,4) for i in range(chunk_size) }
+hole_coords = {(3,2), (3,3), (4,2), (4,3)}
+tunnel_coords = {(i,j,-1) for i in range(3,5) for j in range(2,4)}
+platform1 = {(i,j,1) for i in range(5,8) for j in range(0,3)}
+platform2 = {(i,j,2) for i in range(0,2) for j in range(5,7)}
+boat_blocks = {(1,1,1), (2,1,1)}
+humanoid = [
+    (6,5,1,colors_pants),
+    (6,5,2,colors_shirt),
+    (6,5,3,colors_skin)
+]
+cow_blocks = {(5,2,1)}
+pig_blocks = {(7,6,1)}
 
 # ground layer
 for j in range(chunk_size):
     for i in range(chunk_size - 1, -1, -1):
-        coord = (i,j)
+        coord = (i, j)
+        if coord in hole_coords:
+            continue
         if coord in water_coords:
             colors = colors_water
         elif coord in sand_coords:
@@ -78,5 +98,28 @@ extra_leaf_coords = [
 ]
 for i, j, k in extra_leaf_coords:
     draw_block_iso(i, j, k, colors_leaves)
+
+# tunnel floor blocks
+for i, j, k in tunnel_coords:
+    draw_block_iso(i, j, k, colors_dirt)
+
+# raised stone platforms
+for i, j, k in sorted(platform1 | platform2, key=lambda x: (x[1], -x[0])):
+    draw_block_iso(i, j, k, colors_stone)
+
+# boat floating on the pool
+for i, j, k in boat_blocks:
+    draw_block_iso(i, j, k, colors_wood)
+
+# humanoid character
+for i, j, k, palette in humanoid:
+    draw_block_iso(i, j, k, palette)
+
+# animals
+for i, j, k in cow_blocks:
+    draw_block_iso(i, j, k, colors_cow)
+
+for i, j, k in pig_blocks:
+    draw_block_iso(i, j, k, colors_pig)
 
 print('</svg>')
