@@ -1,55 +1,125 @@
-print('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800" height="600" viewBox="0 0 800 600" >')
+print('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800" height="600" viewBox="0 0 800 600">')
+
 chunk_size = 8
-vec_i_x = 40
-vec_i_y = -23.1
-vec_j_x = 40
-vec_j_y = 23.1
+vec_i_x, vec_i_y = 40, -23.1
+vec_j_x, vec_j_y = 40, 23.1
+vec_k_y = -46.2
 offset_x = 20
-offset_y = 200 + 7*23.1
-# grass
+offset_y = 200 + 7 * 23.1
+
 colors_grass = {'top': '#7cbd6b', 'left': '#5e8c4e', 'right': '#4d7a3d'}
-# wood
+colors_sand = {'top': '#f4a460', 'left': '#cfa15f', 'right': '#b68a36'}
+colors_water = {'top': '#1e90ff', 'left': '#187bcd', 'right': '#0b548b'}
+colors_stone = {'top': '#a9a9a9', 'left': '#808080', 'right': '#696969'}
 colors_wood = {'top': '#a0522d', 'left': '#8b4513', 'right': '#6b4513'}
-# leaves
 colors_leaves = {'top': '#228b22', 'left': '#006400', 'right': '#004b00'}
-# function to draw block
+colors_dirt = {'top': '#8b4513', 'left': '#5a3414', 'right': '#3e220a'}
+colors_skin = {'top': '#ffdbac', 'left': '#e1b899', 'right': '#d1a180'}
+colors_shirt = {'top': '#8b0000', 'left': '#7a0000', 'right': '#660000'}
+colors_pants = {'top': '#00008b', 'left': '#00006b', 'right': '#00004b'}
+colors_pig = {'top': '#ffc0cb', 'left': '#ffb6c1', 'right': '#ffa6b1'}
+colors_cow = {'top': '#ffffff', 'left': '#cccccc', 'right': '#999999'}
+
+
 def draw_block(pos_x, pos_y, colors):
     print(f'<g transform="translate({pos_x}, {pos_y})">')
-    print(f'<path fill="{colors["top"]}" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />')
-    print(f'<path fill="{colors["left"]}" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />')
-    print(f'<path fill="{colors["right"]}" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />')
+    print(f'<path fill="{colors["top"]}" stroke="black" stroke-width="0.5" d="M40,46.2 L0,23.1 L40,0 L80,23.1 Z" />')
+    print(f'<path fill="{colors["left"]}" stroke="black" stroke-width="0.5" d="M0,23.1 L40,46.2 L40,92.4 L0,69.3 Z" />')
+    print(f'<path fill="{colors["right"]}" stroke="black" stroke-width="0.5" d="M40,46.2 L80,23.1 L80,69.3 L40,92.4 Z" />')
     print('</g>')
-# draw base grass
+
+
+def draw_block_iso(i, j, k, colors):
+    pos_x = i * vec_i_x + j * vec_j_x + offset_x
+    pos_y = i * vec_i_y + j * vec_j_y + k * vec_k_y + offset_y
+    draw_block(pos_x, pos_y, colors)
+
+
+# coordinates for special ground blocks
+water_coords = {(1,1), (1,2), (2,1), (2,2)}
+sand_coords = {
+    (0,1), (0,2), (1,0), (2,0),
+    (3,1), (3,2), (1,3), (2,3)
+}
+stone_path = { (i,4) for i in range(chunk_size) }
+hole_coords = {(3,2), (3,3), (4,2), (4,3)}
+tunnel_coords = {(i,j,-1) for i in range(3,5) for j in range(2,4)}
+platform1 = {(i,j,1) for i in range(5,8) for j in range(0,3)}
+platform2 = {(i,j,2) for i in range(0,2) for j in range(5,7)}
+boat_blocks = {(1,1,1), (2,1,1)}
+humanoid = [
+    (6,5,1,colors_pants),
+    (6,5,2,colors_shirt),
+    (6,5,3,colors_skin)
+]
+cow_blocks = {(5,2,1)}
+pig_blocks = {(7,6,1)}
+
+# ground layer
 for j in range(chunk_size):
-    for i in range(chunk_size -1, -1, -1):
-        pos_x = i * vec_i_x + j * vec_j_x + offset_x
-        pos_y = i * vec_i_y + j * vec_j_y + offset_y
-        draw_block(pos_x, pos_y, colors_grass)
-# add tree at i=4, j=4
-tree_i = 4
-tree_j = 4
-# wood at z=1
-pos_x = tree_i * vec_i_x + tree_j * vec_j_x + offset_x
-pos_y = tree_i * vec_i_y + tree_j * vec_j_y + offset_y - 46.2
-draw_block(pos_x, pos_y, colors_wood)
-# leaves at z=2
-pos_y = pos_y - 46.2
-draw_block(pos_x, pos_y, colors_leaves)
-# more leaves
-# left i-1
-pos_x = (tree_i-1) * vec_i_x + tree_j * vec_j_x + offset_x
-pos_y = (tree_i-1) * vec_i_y + tree_j * vec_j_y + offset_y - 46.2 *2
-draw_block(pos_x, pos_y, colors_leaves)
-# right i+1
-pos_x = (tree_i+1) * vec_i_x + tree_j * vec_j_x + offset_x
-pos_y = (tree_i+1) * vec_i_y + tree_j * vec_j_y + offset_y - 46.2 *2
-draw_block(pos_x, pos_y, colors_leaves)
-# front j-1
-pos_x = tree_i * vec_i_x + (tree_j-1) * vec_j_x + offset_x
-pos_y = tree_i * vec_i_y + (tree_j-1) * vec_j_y + offset_y - 46.2 *2
-draw_block(pos_x, pos_y, colors_leaves)
-# back j+1
-pos_x = tree_i * vec_i_x + (tree_j+1) * vec_j_x + offset_x
-pos_y = tree_i * vec_i_y + (tree_j+1) * vec_j_y + offset_y - 46.2 *2
-draw_block(pos_x, pos_y, colors_leaves)
+    for i in range(chunk_size - 1, -1, -1):
+        coord = (i, j)
+        if coord in hole_coords:
+            continue
+        if coord in water_coords:
+            colors = colors_water
+        elif coord in sand_coords:
+            colors = colors_sand
+        elif coord in stone_path:
+            colors = colors_stone
+        else:
+            colors = colors_grass
+        draw_block_iso(i, j, 0, colors)
+
+# first tree at center
+center_i, center_j = 4, 4
+for k in range(1, 3):
+    draw_block_iso(center_i, center_j, k, colors_wood)
+leaf_coords = [
+    (center_i, center_j, 3),
+    (center_i - 1, center_j, 3),
+    (center_i + 1, center_j, 3),
+    (center_i, center_j - 1, 3),
+    (center_i, center_j + 1, 3)
+]
+for i, j, k in leaf_coords:
+    draw_block_iso(i, j, k, colors_leaves)
+
+# additional tree
+extra_i, extra_j = 1, 6
+for k in range(1, 3):
+    draw_block_iso(extra_i, extra_j, k, colors_wood)
+extra_leaf_coords = [
+    (extra_i, extra_j, 3),
+    (extra_i - 1, extra_j, 3),
+    (extra_i + 1, extra_j, 3),
+    (extra_i, extra_j - 1, 3),
+    (extra_i, extra_j + 1, 3)
+]
+for i, j, k in extra_leaf_coords:
+    draw_block_iso(i, j, k, colors_leaves)
+
+# tunnel floor blocks
+for i, j, k in tunnel_coords:
+    draw_block_iso(i, j, k, colors_dirt)
+
+# raised stone platforms
+for i, j, k in sorted(platform1 | platform2, key=lambda x: (x[1], -x[0])):
+    draw_block_iso(i, j, k, colors_stone)
+
+# boat floating on the pool
+for i, j, k in boat_blocks:
+    draw_block_iso(i, j, k, colors_wood)
+
+# humanoid character
+for i, j, k, palette in humanoid:
+    draw_block_iso(i, j, k, palette)
+
+# animals
+for i, j, k in cow_blocks:
+    draw_block_iso(i, j, k, colors_cow)
+
+for i, j, k in pig_blocks:
+    draw_block_iso(i, j, k, colors_pig)
+
 print('</svg>')
